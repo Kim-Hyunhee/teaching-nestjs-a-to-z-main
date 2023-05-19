@@ -1,6 +1,6 @@
 import { ApiProperty } from '@nestjs/swagger';
 
-export class CatRequestDto {
+export class CatCurrentDto {
   @ApiProperty({
     example: 'amamov@kakao.com',
     description: 'email',
@@ -16,9 +16,15 @@ export class CatRequestDto {
   name: string;
 
   @ApiProperty({
+    example: '3280199',
+    description: 'id',
+  })
+  id: string;
+
+  @ApiProperty({
     example: 'amamov.com',
-    description: 'password',
+    description: 'image',
     required: true,
   })
-  password: string;
+  image: string;
 }
